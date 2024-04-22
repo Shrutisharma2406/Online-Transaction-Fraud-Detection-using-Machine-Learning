@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Risque&family=Roboto+Slab:wght@500&display=swap');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-top:10%;
+        }
+
+        strong {
+            
+            /* background-color: azure; */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+        
+        .Fraud{
+            color:red;
+            font-family: 'Risque', serif;
+            background-color:black;
+            font-size:50px;
+        }
+        .No_Fraud{
+            color:Green;
+            font-family: 'Roboto Slab', serif;
+            background-color:black;
+            font-size:50px;
+        }
+       
+    </style>
+</head>
+<body>
+{% if is_fraud == 'Fraud' %}
+<strong class="Fraud">Result :This is a fraud transaction</strong>
+{% else %} 
+<strong  class="No_Fraud">Result :This is not a fraud transaction</strong>
+{% endif %} 
+
+
+    
+</body>
+</html>
